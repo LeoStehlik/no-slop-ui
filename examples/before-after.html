@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>no-slop-ui before and after</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --panel: #ffffff;
+      --text: #24292f;
+      --muted: #57606a;
+      --border: #d0d7de;
+      --accent: #0969da;
+      --bad-bg: #1b1235;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 40px 24px; }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+    p { margin: 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
+    .frame { border: 1px solid var(--border); background: var(--panel); border-radius: 8px; overflow: hidden; }
+    .label { padding: 12px 16px; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .bad-demo {
+      min-height: 360px;
+      padding: 28px;
+      background: radial-gradient(circle at 20% 10%, #8b5cf6, transparent 30%), linear-gradient(135deg, #111827, #312e81);
+      color: white;
+    }
+    .bad-card {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.38);
+      backdrop-filter: blur(18px);
+    }
+    .bad-card small { display: block; color: #ddd6fe; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; }
+    .bad-card h2 { font-size: 34px; margin: 0 0 16px; }
+    .bad-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+    .bad-metric { border-radius: 20px; padding: 16px; background: rgba(255,255,255,0.12); }
+    .good-demo { min-height: 360px; display: grid; grid-template-columns: 220px 1fr; background: #ffffff; }
+    .sidebar { border-right: 1px solid var(--border); background: #f6f8fa; padding: 18px 14px; }
+    .nav-item { padding: 8px 10px; border-radius: 6px; color: var(--muted); }
+    .nav-item.active { background: #eaeef2; color: var(--text); font-weight: 600; }
+    .content { padding: 24px; }
+    .toolbar { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 20px; }
+    .button { border: 1px solid var(--accent); background: var(--accent); color: white; border-radius: 6px; padding: 8px 12px; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { background: #f6f8fa; font-size: 13px; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .good-demo { grid-template-columns: 1fr; } .sidebar { border-right: 0; border-bottom: 1px solid var(--border); } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Before and after</h1>
+    <p>A compact example of what no-slop-ui is trying to block: decorative AI dashboard habits replaced with a plain interface a user could actually work in.</p>
+    <section class="grid" aria-label="before and after examples">
+      <div class="frame">
+        <div class="label">Before: generated UI slop</div>
+        <div class="bad-demo">
+          <div class="bad-card">
+            <small>Operational clarity</small>
+            <h2>Command centre for your workflow</h2>
+            <p style="color:#ede9fe">Glass panel, decorative gradient, vague copy, and metric boxes that do not help a real task.</p>
+            <div class="bad-metrics">
+              <div class="bad-metric">98%</div>
+              <div class="bad-metric">42k</div>
+              <div class="bad-metric">7.3x</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="label">After: usable work surface</div>
+        <div class="good-demo">
+          <aside class="sidebar">
+            <div class="nav-item active">Review queue</div>
+            <div class="nav-item">Providers</div>
+            <div class="nav-item">Settings</div>
+          </aside>
+          <section class="content">
+            <div class="toolbar">
+              <div>
+                <h2 style="font-size:20px;margin:0 0 4px">Review queue</h2>
+                <p>Items that need a human decision.</p>
+              </div>
+              <button class="button">Run check</button>
+            </div>
+            <table>
+              <thead><tr><th>Item</th><th>Status</th><th>Owner</th></tr></thead>
+              <tbody>
+                <tr><td>API provider config</td><td>Needs review</td><td>Admin</td></tr>
+                <tr><td>Model routing</td><td>Ready</td><td>Platform</td></tr>
+                <tr><td>Audit log copy</td><td>Blocked</td><td>Security</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

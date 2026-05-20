@@ -14,6 +14,10 @@ This skill exists to stop that.
 
 ---
 
+## Credibility Artifact
+
+Open [`examples/before-after.html`](examples/before-after.html) to see a compact before/after example: generic AI dashboard habits on one side, a plain usable work surface on the other.
+
 ## What It Does
 
 - Blocks the most common AI UI anti-patterns (full list in `references/banned-patterns.md`)
