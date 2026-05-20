@@ -116,6 +116,13 @@ Before accepting generated UI, run the short proof checklist in [`examples/revie
 
 ---
 
+
+## Related Tools
+
+- [Brief Master](https://github.com/LeoStehlik/brief-master) - write frontend briefs that include clear audience, constraints, and success criteria before UI generation starts.
+- [Proof Loop](https://github.com/LeoStehlik/proof-loop) - use when a UI change needs explicit acceptance criteria, screenshots, browser checks, or fresh verification before it is called done.
+- [Loopsmith](https://github.com/LeoStehlik/loopsmith) - use when the same UI-quality failure keeps recurring and should become an eval case rather than another one-off review.
+
 ## Inspiration
 
 Inspired by [Uncodixfy](https://github.com/cyxzdev/Uncodixfy) by cyxzdev. Built as our own take - adapted, extended, and published as an OpenClaw skill.
