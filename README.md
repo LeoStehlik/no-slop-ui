@@ -23,7 +23,7 @@ This skill exists to stop that.
 
 ## Credibility Artifact
 
-Open [`examples/before-after.html`](examples/before-after.html) to see a compact before/after example: generic AI dashboard habits on one side, a plain usable work surface on the other.
+See [`examples/README.md`](examples/README.md) for the example index, or open [`examples/before-after.html`](examples/before-after.html) to compare generic AI dashboard habits with a plain usable work surface.
 
 ## What It Does
 
