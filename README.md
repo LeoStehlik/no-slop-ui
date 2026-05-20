@@ -119,6 +119,22 @@ Before accepting generated UI, run the short proof checklist in [`examples/revie
 ---
 
 
+## When To Use Which Repo
+
+Use this repo when an AI agent is building frontend UI and you want to block the usual generic output: glass panels, decorative gradients, oversized rounded corners, empty hero copy, and dashboard sludge.
+
+Use the neighbouring tools at different points in the workflow:
+
+| Need | Use |
+| --- | --- |
+| Turn a fuzzy request into an executable agent brief | [Brief Master](https://github.com/LeoStehlik/brief-master) |
+| Prove one coding task is actually done | [Proof Loop](https://github.com/LeoStehlik/proof-loop) |
+| Improve repeated agent behaviour with evals | [Loopsmith](https://github.com/LeoStehlik/loopsmith) |
+| Keep source-backed memory for long-running agents | [Sovereign Brain](https://github.com/LeoStehlik/decoupled-agent-memory) |
+| Stop frontend agents producing generic UI sludge | [no-slop-ui](https://github.com/LeoStehlik/no-slop-ui) |
+
+A practical chain looks like this: messy request -> Brief Master brief -> Proof Loop task -> Loopsmith eval if the same failure keeps recurring -> Sovereign Brain records the durable decision.
+
 ## Related Tools
 
 - [Brief Master](https://github.com/LeoStehlik/brief-master) - write frontend briefs that include clear audience, constraints, and success criteria before UI generation starts.
