@@ -1,5 +1,7 @@
 # no-slop-ui
 
+![Validate](https://github.com/LeoStehlik/no-slop-ui/actions/workflows/validate.yml/badge.svg)
+
 **Stop AI UI slop. Build interfaces that look human-designed.**
 
 AI coding agents default to the same tired patterns: floating glass cards, gradient abuse, oversized rounded corners, eyebrow labels, hero sections inside dashboards. After a while you can spot "AI UI" from a mile away.
