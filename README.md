@@ -8,9 +8,16 @@ AI coding agents default to the same tired patterns: floating glass cards, gradi
 
 This skill exists to stop that.
 
-`no-slop-ui` is a rule set for AI coding agents that blocks the default AI aesthetic and pushes toward clean, functional, honest interfaces - the kind built by teams like Linear, Raycast, Stripe, and GitHub.
+`no-slop-ui` is a frontend design rule set for AI coding agents. It blocks the default AI aesthetic and pushes toward clean, functional, honest interfaces - the kind built by teams like Linear, Raycast, Stripe, and GitHub.
 
 **Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in `examples/review-checklist.md` before accepting generated UI.
+
+## Use Cases
+
+- stop AI agents from producing generic glassy dashboard UI
+- review frontend work before accepting generated code
+- give coding agents concrete design rules instead of taste adjectives
+- keep app screens quiet, usable, and domain-appropriate
 
 ---
 
