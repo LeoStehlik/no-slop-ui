@@ -8,7 +8,7 @@ This skill exists to stop that.
 
 `no-slop-ui` is a rule set for AI coding agents that blocks the default AI aesthetic and pushes toward clean, functional, honest interfaces - the kind built by teams like Linear, Raycast, Stripe, and GitHub.
 
-**Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in  before accepting generated UI.
+**Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in `examples/review-checklist.md` before accepting generated UI.
 
 ---
 
@@ -111,6 +111,8 @@ no-slop-ui/
 - Dramatic box shadows (24px+ blur)
 
 Full list: [`references/banned-patterns.md`](references/banned-patterns.md)
+
+Before accepting generated UI, run the short proof checklist in [`examples/review-checklist.md`](examples/review-checklist.md).
 
 ---
 
