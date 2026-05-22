@@ -1,8 +1,9 @@
 ---
 name: no-slop-ui
-description: Prevents generic AI UI slop when building any frontend. Use whenever generating or reviewing HTML, CSS, React, Next.js, Vue, Svelte, plain HTML dashboards, admin panels, or landing pages. Stops floating glass cards, gradient abuse, oversized rounded corners, eyebrow labels, hero sections inside dashboards, and every other "AI-generated UI" tell. Enforces clean, honest, human-designed aesthetics inspired by Linear, Raycast, Stripe, and GitHub. Stack-agnostic.
+description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
+metadata:
+  version: "0.2.0"
 ---
-
 # No Slop UI
 
 You are building UI for a human audience. The goal is functional, honest, clean. Not impressive. Not dramatic. **Normal.**
