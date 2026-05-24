@@ -2,7 +2,7 @@
 name: no-slop-ui
 description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 # No Slop UI
 
@@ -12,6 +12,13 @@ If a design decision feels like the easy AI default — it probably is. Pick the
 
 Read `references/banned-patterns.md` for the full banned list before writing any UI code.
 Read `references/colour-palettes.md` when you need to pick colours.
+
+
+## Activation Boundary
+
+Use this skill only when the user explicitly asks for UI design, frontend implementation, visual polish, design review, or when the current task's primary deliverable is a visible interface. Do not activate it for backend-only tasks, copywriting, diagrams, infrastructure, or general code review.
+
+Treat this skill as a visual-quality layer. It must not override product requirements, accessibility, security, localization, data correctness, or the repository's existing design system. If those conflict with a no-slop rule, preserve the user requirement and explain the tradeoff.
 
 ## The Standard
 

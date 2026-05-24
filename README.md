@@ -12,6 +12,13 @@ This skill exists to stop that.
 
 **Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in `examples/review-checklist.md` before accepting generated UI.
 
+
+## Activation Boundary
+
+Use `no-slop-ui` for explicit UI design, frontend implementation, visual polish, or design review tasks. It should not trigger on backend-only work, infrastructure tasks, copywriting, diagrams, or unrelated code review.
+
+The rules are advisory visual constraints. They do not override accessibility, security, localization, product requirements, or an existing project design system.
+
 ## Use Cases
 
 - stop AI agents from producing generic glassy dashboard UI
@@ -56,7 +63,7 @@ Clone this repo into that directory:
 git clone https://github.com/LeoStehlik/no-slop-ui.git /path/to/your/skills/no-slop-ui
 ```
 
-OpenClaw will auto-discover the skill. It triggers automatically whenever you ask for frontend UI work.
+OpenClaw will auto-discover the skill. Use it when the task is explicitly about frontend UI work.
 
 ### Codex / Claude Code / other agents
 
@@ -72,7 +79,7 @@ Read no-slop-ui/SKILL.md before building any UI.
 
 ## Usage
 
-Once installed in OpenClaw, it triggers automatically on any UI task. You can also invoke it explicitly:
+Invoke it explicitly for UI work:
 
 ```
 /no-slop-ui
