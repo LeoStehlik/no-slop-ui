@@ -12,6 +12,38 @@ This skill exists to stop that.
 
 **Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in `examples/review-checklist.md` before accepting generated UI.
 
+## Start Here
+
+Use No Slop UI when an agent is about to build or review a visible interface. The fastest path is:
+
+```bash
+git clone https://github.com/LeoStehlik/no-slop-ui.git
+cd no-slop-ui
+python3 scripts/validate_skill_repo.py
+open examples/before-after.html
+```
+
+For agent work, give the agent `SKILL.md`, then check the result against `examples/review-checklist.md` before accepting the UI. The skill is intentionally blunt: it rejects common AI defaults such as glass panels, decorative gradients, oversized corners, empty hero copy, and dashboard filler.
+
+## Works With
+
+No Slop UI is framework-agnostic. Use it with any coding agent or frontend stack where the output is a visible screen.
+
+Known-fit surfaces:
+
+- Codex
+- Claude Code
+- OpenClaw
+- OpenCode
+- custom agent runners
+
+Known-fit frontend stacks:
+
+- React / Next.js
+- Vue / Svelte
+- Tailwind / shadcn/ui
+- plain HTML/CSS dashboards
+
 
 ## Activation Boundary
 
