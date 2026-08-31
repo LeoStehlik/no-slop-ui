@@ -54,4 +54,10 @@ sensitive-string scan across README, SKILL, examples, docs, assets, and proof ar
 (no private paths, hosts, client names, or credential-looking strings found)
 ```
 
-Release tag/release proof is recorded in the final release summary after tagging.
+Release proof target:
+
+```text
+Release: https://github.com/LeoStehlik/no-slop-ui/releases/tag/v0.3.0
+Tag: v0.3.0
+GitHub Actions Validate on release proof commit: to be confirmed after push
+```
