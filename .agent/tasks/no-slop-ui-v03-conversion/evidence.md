@@ -36,3 +36,22 @@ sensitive-string scan across README, SKILL, examples, docs, assets, and proof ar
 - AC4: PASS - checklist is now a standalone acceptance artifact with explicit verdict rules.
 - AC5: PASS pending release - `SKILL.md` metadata is `0.3.0`; local validation passes.
 - AC6: PASS pending remote release proof - proof-loop artifacts exist; local validation and scan recorded here.
+
+## PR And Clean Clone Proof
+
+```text
+PR #5: https://github.com/LeoStehlik/no-slop-ui/pull/5
+GitHub Actions validate: PASS
+Merged master commit: de301d2
+
+Clean clone validation:
+git clone --depth 1 https://github.com/LeoStehlik/no-slop-ui.git /tmp/no-slop-ui-clean-v03
+python3 scripts/validate_skill_repo.py
+skill repo validation passed
+python3 -m json.tool .agent/tasks/no-slop-ui-v03-conversion/verdict.json
+PASS
+sensitive-string scan across README, SKILL, examples, docs, assets, and proof artifacts
+(no private paths, hosts, client names, or credential-looking strings found)
+```
+
+Release tag/release proof is recorded in the final release summary after tagging.

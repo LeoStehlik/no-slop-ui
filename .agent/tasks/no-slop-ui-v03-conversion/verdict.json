@@ -1,8 +1,8 @@
 {
   "task_id": "no-slop-ui-v03-conversion",
-  "phase": "builder-evidence",
+  "phase": "post-merge-evidence",
   "agent": "Francis",
-  "timestamp": "2026-08-31T14:40:18Z",
+  "timestamp": "2026-08-31T14:43:04Z",
   "overall": "PASS",
   "criteria": [
     {
@@ -28,12 +28,12 @@
     {
       "id": "AC5",
       "status": "PASS",
-      "note": "SKILL.md metadata bumped to 0.3.0 and local validation passes; release proof follows after commit/tag."
+      "note": "SKILL.md metadata is 0.3.0; local validation and PR GitHub Actions passed. Release tag follows this proof commit."
     },
     {
       "id": "AC6",
       "status": "PASS",
-      "note": "Spec, evidence, verdict, and problems artifacts exist; local validation, diff check, and sensitive-string scan pass."
+      "note": "Spec, evidence, verdict, and problems artifacts exist; local validation, diff check, sensitive scan, PR Actions, and clean clone validation pass."
     }
   ]
 }
