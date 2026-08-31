@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">No Slop UI before and after artifact</title>
+  <desc id="desc">A comparison of a generic AI dashboard style against a restrained usable work surface.</desc>
+  <rect width="1200" height="520" fill="#f6f8fa"/>
+  <text x="40" y="56" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="28" font-weight="700" fill="#24292f">No Slop UI proof artifact</text>
+  <text x="40" y="86" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="15" fill="#57606a">Generic AI dashboard habits replaced with a work surface a user can actually scan.</text>
+  <g transform="translate(40 122)">
+    <rect width="500" height="340" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <rect width="500" height="44" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="18" y="28" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="15" font-weight="700" fill="#24292f">Before: generated UI slop</text>
+    <rect x="1" y="45" width="498" height="294" fill="#312e81"/>
+    <circle cx="135" cy="118" r="116" fill="#8b5cf6" opacity="0.28"/>
+    <rect x="62" y="86" width="376" height="214" rx="30" fill="#ffffff" opacity="0.16" stroke="#ddd6fe"/>
+    <text x="92" y="134" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" letter-spacing="3" fill="#ddd6fe">OPERATIONAL CLARITY</text>
+    <text x="92" y="174" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="31" font-weight="800" fill="#ffffff">Command centre</text>
+    <text x="92" y="204" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="31" font-weight="800" fill="#ffffff">for your workflow</text>
+    <text x="92" y="238" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="15" fill="#ede9fe">Decorative gradient, frosted panel, vague copy,</text>
+    <text x="92" y="260" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="15" fill="#ede9fe">and fake metric boxes.</text>
+    <rect x="92" y="282" width="86" height="54" rx="18" fill="#ffffff" opacity="0.14"/>
+    <rect x="194" y="282" width="86" height="54" rx="18" fill="#ffffff" opacity="0.14"/>
+    <rect x="296" y="282" width="86" height="54" rx="18" fill="#ffffff" opacity="0.14"/>
+  </g>
+  <g transform="translate(640 122)">
+    <rect width="500" height="340" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <rect width="500" height="44" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+    <text x="18" y="28" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="15" font-weight="700" fill="#24292f">After: usable work surface</text>
+    <rect x="1" y="45" width="498" height="294" fill="#ffffff"/>
+    <rect x="1" y="45" width="132" height="294" fill="#f6f8fa"/>
+    <line x1="133" y1="45" x2="133" y2="339" stroke="#d0d7de"/>
+    <rect x="17" y="68" width="100" height="30" rx="6" fill="#eaeef2"/>
+    <text x="29" y="88" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" font-weight="700" fill="#24292f">Review queue</text>
+    <text x="29" y="126" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Providers</text>
+    <text x="29" y="160" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Settings</text>
+    <text x="161" y="88" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="22" font-weight="700" fill="#24292f">Review queue</text>
+    <text x="161" y="113" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="14" fill="#57606a">Items that need a human decision.</text>
+    <rect x="386" y="75" width="82" height="34" rx="6" fill="#0969da"/>
+    <text x="401" y="97" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Run check</text>
+    <rect x="161" y="142" width="307" height="144" fill="#ffffff" stroke="#d0d7de"/>
+    <rect x="162" y="143" width="305" height="35" fill="#f6f8fa"/>
+    <text x="176" y="166" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="12" font-weight="700" fill="#24292f">Item</text>
+    <text x="304" y="166" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="12" font-weight="700" fill="#24292f">Status</text>
+    <text x="400" y="166" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="12" font-weight="700" fill="#24292f">Owner</text>
+    <line x1="161" y1="178" x2="468" y2="178" stroke="#d0d7de"/>
+    <line x1="161" y1="214" x2="468" y2="214" stroke="#d0d7de"/>
+    <line x1="161" y1="250" x2="468" y2="250" stroke="#d0d7de"/>
+    <text x="176" y="201" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#24292f">API provider config</text>
+    <text x="304" y="201" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Needs review</text>
+    <text x="400" y="201" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Admin</text>
+    <text x="176" y="237" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#24292f">Model routing</text>
+    <text x="304" y="237" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Ready</text>
+    <text x="400" y="237" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Platform</text>
+    <text x="176" y="273" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#24292f">Audit log copy</text>
+    <text x="304" y="273" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Blocked</text>
+    <text x="400" y="273" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif" font-size="13" fill="#57606a">Security</text>
+  </g>
+</svg>

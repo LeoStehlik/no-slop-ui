@@ -1,0 +1,39 @@
+{
+  "task_id": "no-slop-ui-v03-conversion",
+  "phase": "builder-evidence",
+  "agent": "Francis",
+  "timestamp": "2026-08-31T14:40:18Z",
+  "overall": "PASS",
+  "criteria": [
+    {
+      "id": "AC1",
+      "status": "PASS",
+      "note": "README opens with conversion path, proof image, quick-start, reusable prompt, and early links."
+    },
+    {
+      "id": "AC2",
+      "status": "PASS",
+      "note": "docs/conversion-proof.md and assets/no-slop-ui-before-after.svg exist and are README-linked."
+    },
+    {
+      "id": "AC3",
+      "status": "PASS",
+      "note": "docs/agent-snippets.md includes Codex, Claude Code, OpenClaw, Cursor/custom agents, PR review, and brief clause snippets."
+    },
+    {
+      "id": "AC4",
+      "status": "PASS",
+      "note": "examples/review-checklist.md includes Product Fit, Layout, Components, Visual Style, Motion, Copy, and PASS/REVISE/ESCALATE verdicts."
+    },
+    {
+      "id": "AC5",
+      "status": "PASS",
+      "note": "SKILL.md metadata bumped to 0.3.0 and local validation passes; release proof follows after commit/tag."
+    },
+    {
+      "id": "AC6",
+      "status": "PASS",
+      "note": "Spec, evidence, verdict, and problems artifacts exist; local validation, diff check, and sensitive-string scan pass."
+    }
+  ]
+}

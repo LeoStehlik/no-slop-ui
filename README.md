@@ -2,19 +2,13 @@
 
 ![Validate](https://github.com/LeoStehlik/no-slop-ui/actions/workflows/validate.yml/badge.svg)
 
-**Stop AI UI slop. Build interfaces that look human-designed.**
+**Stop AI agents shipping generic frontend sludge.**
 
-AI coding agents default to the same tired patterns: floating glass cards, gradient abuse, oversized rounded corners, eyebrow labels, hero sections inside dashboards. After a while you can spot "AI UI" from a mile away.
+`no-slop-ui` is a small design guardrail for Codex, Claude Code, OpenClaw, and other coding agents. It gives the agent concrete rules before it builds a visible UI, then gives the reviewer a checklist before the work is accepted.
 
-This skill exists to stop that.
-
-`no-slop-ui` is a frontend design rule set for AI coding agents. It blocks the default AI aesthetic and pushes toward clean, functional, honest interfaces - the kind built by teams like Linear, Raycast, Stripe, and GitHub.
-
-**Status:** usable OpenClaw/Codex skill. It is intentionally small: install it, let it trigger on frontend work, and use the checklist in `examples/review-checklist.md` before accepting generated UI.
+Use it when an AI coding agent reaches for glass panels, purple gradients, oversized cards, fake dashboards, vague SaaS copy, or hero sections where a real product screen should be.
 
 ## Start Here
-
-Use No Slop UI when an agent is about to build or review a visible interface. The fastest path is:
 
 ```bash
 git clone https://github.com/LeoStehlik/no-slop-ui.git
@@ -23,157 +17,118 @@ python3 scripts/validate_skill_repo.py
 open examples/before-after.html
 ```
 
-For agent work, give the agent `SKILL.md`, then check the result against `examples/review-checklist.md` before accepting the UI. The skill is intentionally blunt: it rejects common AI defaults such as glass panels, decorative gradients, oversized corners, empty hero copy, and dashboard filler.
+For agent work, paste or reference [`SKILL.md`](SKILL.md), then review the output with [`examples/review-checklist.md`](examples/review-checklist.md).
 
-## Works With
-
-No Slop UI is framework-agnostic. Use it with any coding agent or frontend stack where the output is a visible screen.
-
-Known-fit surfaces:
-
-- Codex
-- Claude Code
-- OpenClaw
-- OpenCode
-- custom agent runners
-
-Known-fit frontend stacks:
-
-- React / Next.js
-- Vue / Svelte
-- Tailwind / shadcn/ui
-- plain HTML/CSS dashboards
-
-
-## Activation Boundary
-
-Use `no-slop-ui` for explicit UI design, frontend implementation, visual polish, or design review tasks. It should not trigger on backend-only work, infrastructure tasks, copywriting, diagrams, or unrelated code review.
-
-The rules are advisory visual constraints. They do not override accessibility, security, localization, product requirements, or an existing project design system.
-
-## Use Cases
-
-- stop AI agents from producing generic glassy dashboard UI
-- review frontend work before accepting generated code
-- give coding agents concrete design rules instead of taste adjectives
-- keep app screens quiet, usable, and domain-appropriate
-
----
+```text
+Read no-slop-ui/SKILL.md before changing this UI. Build the actual product screen first. Avoid decorative gradients, glass panels, nested cards, oversized radius, fake metrics, and vague SaaS copy. After the change, run the no-slop-ui checklist and report any failures before calling it done.
+```
 
 ## Credibility Artifact
 
-See [`examples/README.md`](examples/README.md) for the example index, or open [`examples/before-after.html`](examples/before-after.html) to compare generic AI dashboard habits with a plain usable work surface.
+![No Slop UI before/after artifact](assets/no-slop-ui-before-after.svg)
 
-## What It Does
+The full proof artifact is in [`docs/conversion-proof.md`](docs/conversion-proof.md). It shows the exact before/after UI failure, the review notes, the checklist verdict, and the concrete changes that move an AI-looking dashboard toward a usable work surface.
 
-- Blocks the most common AI UI anti-patterns (full list in `references/banned-patterns.md`)
-- Enforces consistent spacing, typography, border-radius, and shadow rules
-- Provides curated dark and light colour palettes when no project palette exists
-- Stack-agnostic: works with React, Next.js, Vue, Svelte, plain HTML, Tailwind, shadcn/ui - anything
+## What It Blocks
 
----
+- Glassmorphism and frosted panels
+- Decorative gradient backgrounds, gradient text, and glow
+- Huge rounded cards and floating shells
+- Hero sections inside internal dashboards
+- Fake metric grids that fill space but do not support the task
+- Eyebrow labels and vague SaaS filler copy
+- Transform, bounce, scale, or spring hover effects
+- One-hue purple/blue-dark palettes that read as generic AI output
+
+Full list: [`references/banned-patterns.md`](references/banned-patterns.md).
+
+## Works With
+
+No Slop UI is framework-agnostic. It is a rule set and review surface, not a component library.
+
+| Surface | Use it how |
+| --- | --- |
+| Codex | Add `SKILL.md` to repo instructions or the task brief before UI work starts. |
+| Claude Code | Add the skill rules to project memory or paste the quick prompt from [`docs/agent-snippets.md`](docs/agent-snippets.md). |
+| OpenClaw | Install as a workspace skill and invoke it for frontend implementation or review. |
+| Cursor / custom agents | Paste the short guardrail prompt and require the checklist verdict in the final response. |
+
+Frontend stacks it fits: React, Next.js, Vue, Svelte, Tailwind, shadcn/ui, plain HTML/CSS dashboards, and internal tools.
+
+## Tiny Agent Snippets
+
+Copy the relevant snippet from [`docs/agent-snippets.md`](docs/agent-snippets.md):
+
+- Codex repo instruction
+- Claude Code project instruction
+- OpenClaw skill usage
+- Cursor/custom-agent prompt
+- Pull-request review prompt
+
+## Review Checklist
+
+Use [`examples/review-checklist.md`](examples/review-checklist.md) after an agent generates or edits UI.
+
+A simple rule: if two or more checklist sections fail, revise before calling the UI done.
 
 ## Installation
 
 ### OpenClaw
 
-Add your workspace skills directory to `openclaw.json`:
-
-```json
-{
-  "skills": {
-    "load": {
-      "extraDirs": ["/path/to/your/skills"]
-    }
-  }
-}
-```
-
-Clone this repo into that directory:
+Clone this repo into a loaded skills directory:
 
 ```bash
 git clone https://github.com/LeoStehlik/no-slop-ui.git /path/to/your/skills/no-slop-ui
 ```
 
-OpenClaw will auto-discover the skill. Use it when the task is explicitly about frontend UI work.
+Then use it when the task is explicitly about UI design, frontend implementation, visual polish, or design review.
 
 ### Codex / Claude Code / other agents
 
-Include the contents of `SKILL.md` in your system prompt or agent instructions when asking for UI generation.
+Reference the skill directly in your task:
 
-Or reference the file directly in your prompt:
-
-```
-Read no-slop-ui/SKILL.md before building any UI.
+```text
+Read no-slop-ui/SKILL.md before building this interface.
 ```
 
----
+Or paste the focused snippets from [`docs/agent-snippets.md`](docs/agent-snippets.md).
 
-## Usage
+## Repository Map
 
-Invoke it explicitly for UI work:
-
-```
-/no-slop-ui
-```
-
-Or reference it in agent briefs:
-
-```
-Apply no-slop-ui rules to this component.
-```
-
----
-
-## What's Inside
-
-```
+```text
 no-slop-ui/
-├── SKILL.md                        Core rules and standards
-└── references/
-    ├── banned-patterns.md          Full banned list with HTML examples
-    └── colour-palettes.md          Dark + light palettes to use when no project palette exists
-└── examples/
-    └── review-checklist.md         Fast acceptance checklist for generated UI
+├── SKILL.md                         Core rules and activation boundary
+├── references/
+│   ├── banned-patterns.md           Full banned list with examples
+│   └── colour-palettes.md           Conservative palettes when no system exists
+├── examples/
+│   ├── before-after.html            Browser-openable before/after demo
+│   ├── review-checklist.md          Fast acceptance checklist
+│   └── README.md                    Example index
+├── docs/
+│   ├── agent-snippets.md            Copy-paste setup snippets
+│   └── conversion-proof.md          v0.3 proof artifact and checklist verdict
+├── assets/
+│   └── no-slop-ui-before-after.svg  README proof image
+└── scripts/
+    └── validate_skill_repo.py       Link and metadata validator
 ```
-
----
 
 ## The Standard
 
-> Think Linear. Think Raycast. Think Stripe. Think GitHub.  
-> They don't try to grab attention. They just work.
+Think Linear, Raycast, Stripe, GitHub. They do not try to look clever. They make the work legible.
 
-**What normal looks like:**
-- Sidebar: 240–260px fixed, solid background, 1px border-right
-- Cards: 8–12px radius max, subtle 1px border, `box-shadow: 0 2px 8px rgba(0,0,0,0.08)` max
-- Buttons: solid fill or outlined, 6–10px radius max - no pills, no gradients
-- Typography: 14–16px body, single typeface, clear hierarchy - no mixed serif/sans
-- Spacing: 4/8/12/16/24/32px scale - consistent, never random
-- Transitions: 100–200ms ease - opacity or colour only, no transform effects
+Good generated UI usually has:
 
-**Hard no:**
-- Glassmorphism / frosted panels
-- Gradient backgrounds as decoration  
-- Eyebrow labels (`<small>SECTION NAME</small>` + heading)
-- Hero sections inside internal dashboards
-- Decorative copy ("Operational clarity without the clutter")
-- Metric-card grid as the default dashboard layout
-- Transform animations on hover
-- Dramatic box shadows (24px+ blur)
-
-Full list: [`references/banned-patterns.md`](references/banned-patterns.md)
-
-Before accepting generated UI, run the short proof checklist in [`examples/review-checklist.md`](examples/review-checklist.md).
-
----
-
+- Stable sidebar or toolbar dimensions
+- Clear type hierarchy with normal product-scale text
+- Solid surfaces, subtle borders, restrained shadows
+- Buttons with 6-10px radius, no gradients, no pills everywhere
+- Tables, forms, menus, filters, and tabs that behave like familiar software
+- Responsive constraints that stop text and controls from overlapping
+- Direct labels and headings that describe the user task
 
 ## When To Use Which Repo
-
-Use this repo when an AI agent is building frontend UI and you want to block the usual generic output: glass panels, decorative gradients, oversized rounded corners, empty hero copy, and dashboard sludge.
-
-Use the neighbouring tools at different points in the workflow:
 
 | Need | Use |
 | --- | --- |
@@ -183,20 +138,12 @@ Use the neighbouring tools at different points in the workflow:
 | Keep source-backed memory for long-running agents | [Sovereign Brain](https://github.com/LeoStehlik/decoupled-agent-memory) |
 | Stop frontend agents producing generic UI sludge | [no-slop-ui](https://github.com/LeoStehlik/no-slop-ui) |
 
-A practical chain looks like this: messy request -> Brief Master brief -> Proof Loop task -> Loopsmith eval if the same failure keeps recurring -> Sovereign Brain records the durable decision.
-
-## Related Tools
-
-- [Brief Master](https://github.com/LeoStehlik/brief-master) - write frontend briefs that include clear audience, constraints, and success criteria before UI generation starts.
-- [Proof Loop](https://github.com/LeoStehlik/proof-loop) - use when a UI change needs explicit acceptance criteria, screenshots, browser checks, or fresh verification before it is called done.
-- [Loopsmith](https://github.com/LeoStehlik/loopsmith) - use when the same UI-quality failure keeps recurring and should become an eval case rather than another one-off review.
+A practical chain: Brief Master writes the UI task, No Slop UI constrains the visual output, Proof Loop verifies the work, Loopsmith turns repeated failures into evals, and Sovereign Brain keeps the durable lesson.
 
 ## Inspiration
 
-Inspired by [Uncodixfy](https://github.com/cyxzdev/Uncodixfy) by cyxzdev. Built as our own take - adapted, extended, and published as an OpenClaw skill.
-
----
+Inspired by [Uncodixfy](https://github.com/cyxzdev/Uncodixfy) by cyxzdev. Built as our own take: smaller, stricter, and aimed at agent-generated production UI.
 
 ## License
 
-MIT - see [LICENSE](LICENSE)
+MIT - see [LICENSE](LICENSE).
