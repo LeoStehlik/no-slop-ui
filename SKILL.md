@@ -2,7 +2,7 @@
 name: no-slop-ui
 description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 # No Slop UI
 
@@ -72,3 +72,7 @@ Think **Linear. Raycast. Stripe. GitHub.** They don't try to grab attention. The
 - No mixed alignment (some left-aligned, some floating center)
 
 Full banned list with examples: `references/banned-patterns.md`
+
+## Tooling scope
+
+This is an instruction-led UI skill, applied to the frontend task the user requested. Read or edit the relevant UI files within that task; it does not grant authority to deploy, publish or change unrelated code. `scripts/validate_skill_repo.py` is optional maintainer packaging validation, not the UI-generation implementation. Run it only when maintaining this skill repository.
