@@ -83,4 +83,4 @@ Full banned list with examples: `references/banned-patterns.md`
 
 ## Tooling scope
 
-This is an instruction-led UI skill, applied to the frontend task the user requested. Read or edit the relevant UI files within that task; it does not grant authority to deploy, publish or change unrelated code. skill repo validation passed is optional maintainer packaging validation, not the UI-generation implementation. Run it only when maintaining this skill repository.
+This is an instruction-led UI skill, applied to the frontend task the user requested. Read or edit the relevant UI files within that task; it does not grant authority to deploy, publish or change unrelated code. `scripts/validate_skill_repo.py` is optional maintainer packaging validation, not the UI-generation implementation. Run it only when maintaining this skill repository.
