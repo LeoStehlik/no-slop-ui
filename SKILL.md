@@ -2,7 +2,7 @@
 name: no-slop-ui
 description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
 metadata:
-  version: "0.3.1"
+  version: "0.4.0"
 ---
 # No Slop UI
 
@@ -43,7 +43,14 @@ Think **Linear. Raycast. Stripe. GitHub.** They don't try to grab attention. The
 
 ## Stack-Specific Notes
 
-**shadcn/ui + Tailwind:**
+**shadcn/ui + Tailwind (default starting stack):**
+
+When a new UI project starts (and the repo has no established component system), start with **shadcn/ui** as the base component library and **Sonner** for toasts. This is the standing default:
+
+- Scaffold with `npx shadcn@latest init` (Tailwind + CSS variables), then add components with `npx shadcn@latest add <component>` rather than hand-rolling primitives.
+- Add Sonner via `npx shadcn@latest add sonner`, mount a single `<Toaster />` in the app root, and use its `toast()` helper for all notifications — no other toast library, no bespoke toast components.
+- This is the starting point, not a mandate to fill the app with components; add only what the UI needs.
+- If the repo already has its own design system or component library, use that instead and treat this as the fallback.
 - Use shadcn components as-is — don't re-invent what's already there
 - Respect the existing CSS variable system (`--background`, `--foreground`, `--primary` etc.)
 - Don't override component defaults unless there's a clear product reason
