@@ -2,7 +2,7 @@
 name: no-slop-ui
 description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
 metadata:
-  version: "0.4.0"
+  version: "0.5.0"
 ---
 # No Slop UI
 
@@ -45,10 +45,11 @@ Think **Linear. Raycast. Stripe. GitHub.** They don't try to grab attention. The
 
 **shadcn/ui + Tailwind (default starting stack):**
 
-When a new UI project starts (and the repo has no established component system), start with **shadcn/ui** as the base component library and **Sonner** for toasts. This is the standing default:
+When a new UI project starts (and the repo has no established component system), start with **shadcn/ui** as the base component library and **Sonner** for toasts. This is Leo's standing preference for UI work (set 2026-11-12):
 
 - Scaffold with `npx shadcn@latest init` (Tailwind + CSS variables), then add components with `npx shadcn@latest add <component>` rather than hand-rolling primitives.
 - Add Sonner via `npx shadcn@latest add sonner`, mount a single `<Toaster />` in the app root, and use its `toast()` helper for all notifications — no other toast library, no bespoke toast components.
+- For richer prebuilt blocks and patterns, optionally layer **coss ui** (Cal.com's design system, Base UI-based, shadcn-CLI compatible) on top: init a new project with `npx shadcn@latest init @coss/style`, add components with `npx shadcn@latest add @coss/ui`, and install its agent skill with `npx skills add cosscom/ui` so AI assistants (Claude Code, Codex, OpenCode, Cursor and other Agent Skills-compatible agents) know the component APIs without guessing. Docs: https://coss.com/ui — use it when its primitives/particles fit; plain shadcn components remain fine when they do.
 - This is the starting point, not a mandate to fill the app with components; add only what the UI needs.
 - If the repo already has its own design system or component library, use that instead and treat this as the fallback.
 - Use shadcn components as-is — don't re-invent what's already there
@@ -79,7 +80,3 @@ When a new UI project starts (and the repo has no established component system),
 - No mixed alignment (some left-aligned, some floating center)
 
 Full banned list with examples: `references/banned-patterns.md`
-
-## Tooling scope
-
-This is an instruction-led UI skill, applied to the frontend task the user requested. Read or edit the relevant UI files within that task; it does not grant authority to deploy, publish or change unrelated code. `scripts/validate_skill_repo.py` is optional maintainer packaging validation, not the UI-generation implementation. Run it only when maintaining this skill repository.
