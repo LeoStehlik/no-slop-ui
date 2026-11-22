@@ -2,7 +2,7 @@
 name: no-slop-ui
 description: "Build or review frontend UI for clean, restrained, human-designed interfaces without generic AI visual patterns."
 metadata:
-  version: "0.7.0"
+  version: "0.8.0"
 ---
 # No Slop UI
 
@@ -12,6 +12,7 @@ If a design decision feels like the easy AI default — it probably is. Pick the
 
 Read `references/banned-patterns.md` for the full banned list before writing any UI code.
 Read `references/colour-palettes.md` when you need to pick colours.
+Read `references/stack-recipes.md` when choosing a stack for a new interface or rebuilding an AI-looking one.
 
 
 ## Activation Boundary
@@ -42,6 +43,19 @@ Think **Linear. Raycast. Stripe. GitHub.** They don't try to grab attention. The
 3. Never invent random colour combinations.
 
 ## Stack-Specific Notes
+
+### Proven restrained stack
+
+For a new content-led product site or data-heavy operational interface, consider the tested composition in `references/stack-recipes.md`:
+
+- Astro for the static shell and routing
+- React islands only where interaction needs them
+- Tailwind CSS v4 for tokens and responsive layout
+- Base UI or coss ui for accessible interactive primitives
+- Inter for interface copy, Geist Mono for data and code
+- Lucide for restrained functional icons
+
+This is a recipe, not a dependency quota. DoubleMint uses the same visual system with mostly plain JavaScript because the screen did not need a React component tree. WrenLore uses React islands because richer interactions justified them. Pick the least machinery that preserves the product behaviour.
 
 **shadcn/ui + Tailwind (default starting stack):**
 

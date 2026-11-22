@@ -29,6 +29,22 @@ Read no-slop-ui/SKILL.md before changing this UI. Build the actual product scree
 
 The full proof artifact is in [`docs/conversion-proof.md`](docs/conversion-proof.md). It shows the exact before/after UI failure, the review notes, the checklist verdict, and the concrete changes that move an AI-looking dashboard toward a usable work surface.
 
+## Recent Work
+
+These are live interfaces built with the same restrained rules, not generated concept screens. The stack notes and decisions are in [`examples/recent-work.md`](examples/recent-work.md).
+
+### WrenLore website
+
+Product-led marketing without the usual gradient SaaS hero or invented dashboard mockup. Astro provides the shell; real WrenLore screenshots do the explaining.
+
+[![WrenLore website](assets/recent-work/wrenlore-website.png)](https://wrenlore.com/)
+
+### DoubleMint pool dashboard
+
+A dense operational interface rebuilt around real mining, network, block, payout and health data. The charts and metrics exist because miners use them.
+
+[![DoubleMint pool dashboard](assets/recent-work/doublemint-overview.png)](https://pool.derogold.online/)
+
 ## What It Blocks
 
 - Glassmorphism and frosted panels
@@ -100,16 +116,19 @@ no-slop-ui/
 ├── SKILL.md                         Core rules and activation boundary
 ├── references/
 │   ├── banned-patterns.md           Full banned list with examples
-│   └── colour-palettes.md           Conservative palettes when no system exists
+│   ├── colour-palettes.md           Conservative palettes when no system exists
+│   └── stack-recipes.md             Tested stack compositions and selection rules
 ├── examples/
 │   ├── before-after.html            Browser-openable before/after demo
+│   ├── recent-work.md               Real WrenLore and DoubleMint implementation notes
 │   ├── review-checklist.md          Fast acceptance checklist
 │   └── README.md                    Example index
 ├── docs/
 │   ├── agent-snippets.md            Copy-paste setup snippets
 │   └── conversion-proof.md          v0.3 proof artifact and checklist verdict
 ├── assets/
-│   └── no-slop-ui-before-after.svg  README proof image
+│   ├── no-slop-ui-before-after.svg  README proof image
+│   └── recent-work/                 Screenshots from shipped interfaces
 └── scripts/
     └── validate_skill_repo.py       Link and metadata validator
 ```
